@@ -1,5 +1,9 @@
 import { test, expect } from '@playwright/test';
 
+/**
+ * Je n'arrive pas à exécuter mes tests, ils semblent introuvables
+ *
+ */
 test.describe('Calculator', () => {
     test.beforeEach(async ({ page }) => {
         await page.goto('http://localhost:5173/');
@@ -48,6 +52,10 @@ test.describe('Calculator', () => {
                 await expect(page.locator('.screen')).toHaveText('9');
             });
         });
+
+        /**
+         * Il manque les tests sur chaque bouton d'opération qui vérifieraient si chaque bouton fonctionne correctement
+         */
 
         test.describe('Calculator test operations button', () => {
             test.describe('addition operations', () => {
